@@ -1,12 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.API_URL,
+  baseURL: import.meta.env.VITE_API_URL,
 });
-
-api.interceptors.request.use(async function (config) {
-  config.headers.accessKey = process.env.REACT_APP_API_KEY
-  return config;
-});
-
+api.defaults.headers['Content-Type'] = 'application/json';
+api.defaults.headers['Access-Control-Allow-Origin'] = '*';
+api.defaults.headers.accessKey = import.meta.env.VITE_API_KEY;
 export default api;
