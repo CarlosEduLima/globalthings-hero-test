@@ -1,0 +1,39 @@
+.card {
+    background: var(--gray-800);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+.card + .card {
+    margin-top: 2rem;
+}
+
+.card .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card > .hero button {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.heroInfo strong {
+    display: block;
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.heroInfo span {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
