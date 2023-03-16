@@ -1,10 +1,44 @@
-.wrapper {
-    max-width: 70rem;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.container {
+    background-color: var(--gray-800);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
 
-    display: grid;
-    grid-template-columns: 256px 1fr; /*px fixo fr ocupa o resto*/
-    gap: 2rem;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .buttonContainer {
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem 2rem;
+    width: 80%;
+}
+
+.container .buttonContainer .buttonText {
+    background: transparent;
+    color: var(--green-500);
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+    height: 50px;
+    padding: 0 1.5rem;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+}
+
+.container .buttonContainer .buttonText:hover {
+    background: var(--green-500);
+    color: var(--white);
 }

@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import { Header } from './components/Header/Header'
+import { useState } from "react";
+import styles from "./App.module.css";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Header />
+    <div className={styles.container}>
+      <div className={styles.buttonContainer}>
+        <Link to={"heroes"} style={{ textDecoration: 'none' }}>
+          <span className={styles.buttonText}>Cadastrar herói</span>
+        </Link>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
