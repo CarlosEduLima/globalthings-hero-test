@@ -14,6 +14,6 @@
 <h3 align="left">Rodando localmente:</h3>
 
 - Criar arquivo .env com as seguintes variaveis: VITE_API_URL= VITE_API_KEY=
-- Rodar os seguintes comandos
+- Rodar os seguintes comandos na raiz do projeto
 - npm install
 - npm run dev
