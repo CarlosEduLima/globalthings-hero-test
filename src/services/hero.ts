@@ -5,15 +5,15 @@ export interface IHeroProps {
   Name: string;
   CategoryId: number;
   Active: boolean;
-  Category: {
+  Category?: {
     Id: number;
     Name: string;
   };
 }
 
-export const getHeroes = async () => {
+export const getHeroes = async (): Promise<IHeroProps[] | unknown> => {
   try {
-    const { data } = await api.get<IHeroProps[]>("/Heroes");
+    const { data } = await api.get("/Heroes");
     return data;
   } catch (error) {
     return error;
