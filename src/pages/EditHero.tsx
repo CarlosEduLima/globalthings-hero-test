@@ -23,7 +23,8 @@ function EditHero() {
     })();
   }, []);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
     const formData = {
       Id: location.state?.id,
       Name: name,
@@ -31,16 +32,16 @@ function EditHero() {
       Active: active,
     };
     setLoading(true);
-    const response = await editHero(formData);
+    const status = await editHero(formData);
     setLoading(false);
-    /* response !== 200
-      ? setErrorMsg("Não foi possivel criar herói")
-      : navigate(-1); */
+    status === 200 || status === 201
+      ? navigate("/herois")
+      : setErrorMsg("Não foi possivel criar herói");
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.container}>
-      <label htmlFor="name">NOME</label>
+    <form onSubmit={(e) => handleSubmit(e)} className={styles.container}>
+      <label htmlFor="name">Nome</label>
       <br></br>
       <input
         type="text"
@@ -52,7 +53,7 @@ function EditHero() {
         required
         onChange={(event) => setName(event.target.value)}
       />
-      <label htmlFor="name">CATEGORIA</label>
+      <label htmlFor="name">Categoria</label>
       <br></br>
       <select
         onChange={(event) => setCategory(event.target.value)}
@@ -61,11 +62,11 @@ function EditHero() {
       >
         <option value="">Selecione a categoria</option>
         {categories?.map((category) => (
-          <option value={category?.Id}>{category?.Name}</option>
+          <option value={category?.Id} key={category?.Id}>{category?.Name}</option>
         ))}
       </select>
       <label htmlFor="active" style={{ alignSelf: "flex-start" }}>
-        ATIVO
+        Ativo
       </label>
       <br></br>
       <input
