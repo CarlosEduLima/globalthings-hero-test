@@ -7,4 +7,12 @@
     grid-template-columns: 256px 1fr; /*px fixo fr ocupa o resto*/
     gap: 2rem;
     align-items: flex-start;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.wrapper .loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
