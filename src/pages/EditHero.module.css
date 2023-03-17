@@ -1,0 +1,87 @@
+.container {
+    background-color: var(--gray-800);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container input {
+    height: 50px;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: transparent;
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+    color: var(--white);
+}
+
+.container input:focus {
+    outline: 1px solid var(--white);
+}
+
+.container select {
+    height: 50px;
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.container select option {
+    background: var(--gray-700);
+    color: var(--white);
+}
+
+.container select:focus {
+    outline: 1px solid var(--white);
+}
+
+.container input[type='checkbox'] {
+    height: 20px;
+    width: 40px;
+    align-self: flex-start;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: transparent;
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+}
+
+.container input[type='checkbox']:focus {
+    outline: none;
+}
+
+.container .button {
+    background: transparent;
+    color: var(--green-500);
+    margin-top: 1rem;
+    padding: 1.5rem 2rem 2rem;
+    width: 60%;
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+    height: 50px;
+    padding: 0 1.5rem;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container .buttonContainer .buttonText:hover {
+    background: var(--green-500);
+    color: var(--white);
+}
