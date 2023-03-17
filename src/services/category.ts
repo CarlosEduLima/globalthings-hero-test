@@ -13,32 +13,3 @@ export const getCategories = async (): Promise<ICategoryProps[] | undefined> => 
     console.log(error);
   }
 };
-
-/* export const createHero = async (hero: IHeroProps) => {
-  try {
-    const body = hero;
-    const { status } = await api.post("/Heroes", body);
-    return status;
-  } catch (error) {
-    return error;
-  }
-};
-
-export const editHero = async (hero: IHeroProps) => {
-  try {
-    const body = hero;
-    const { status } = await api.put(`/Heroes/${hero.Id}`, body);
-    return status;
-  } catch (error) {
-    return error;
-  }
-};
-
-export const deleteHero = async (id: number) => {
-  try {
-    const { status } = await api.delete(`/Heroes/${id}`);
-    return status;
-  } catch (error) {
-    return error;
-  }
-}; */
