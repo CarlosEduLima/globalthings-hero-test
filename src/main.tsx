@@ -7,6 +7,7 @@ import "./global.css";
 import { HeroProvider } from "./contexts/Hero";
 import RegisterHero from "./pages/RegisterHero";
 import EditHero from "./pages/EditHero";
+import { Header } from "./components/Header";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HeroProvider>
+      <Header />
       <RouterProvider router={router} />
     </HeroProvider>
   </React.StrictMode>
