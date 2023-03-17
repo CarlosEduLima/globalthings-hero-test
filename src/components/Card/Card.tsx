@@ -1,32 +1,24 @@
 import styles from "./Card.module.css";
-import { getHeroes } from "../../services/hero";
-import { useEffect, useState } from "react";
-export function Card(data: any) {
-  const [hero, setHero] = useState<any>([]);
 
-  const get = async () => {
-    const data = await getHeroes();
-    console.log('fjdlkfjlk', data)
-    setHero(data);
-  };
-
-  useEffect(() => {
-    get();
-  }, []);
-
-  return !hero ? <span>fail</span> : (
+export function Card({data, setHero}: any) {
+ 
+  return data ? (
     <>
-      {/* {data?.map((hero: any) => ( */}
-        <article className={styles.card}>
+      {data.map((item: any) => (
+        <article className={styles.card} key={item?.Id}>
           <div className={styles.hero}>
             <div className={styles.heroInfo}>
-              <strong>hero.Name</strong>
-              <span>name</span>
+              <strong>{item.Name}</strong>
+              <span>{item?.Category?.Name}</span>
             </div>
           </div>
-          <button>Detalhes</button>
+          <div className={styles.buttonContainer} onClick={() => setHero(item)}>
+            <span className={styles.buttonText}>Detalhes</span>
+          </div>
         </article>
-     {/*  ))} */}
+      ))}
     </>
+  ) : (
+    <span>Nenhum herói encontrado</span>
   );
 }

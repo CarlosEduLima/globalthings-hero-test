@@ -2,6 +2,8 @@
     background: var(--gray-800);
     border-radius: 8px;
     padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card + .card {
@@ -10,8 +12,6 @@
 
 .card .hero {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .card > .hero button {
@@ -36,4 +36,34 @@
     font-size: 0.875rem;
     color: var(--gray-400);
     line-height: 1.6;
+}
+
+.card .buttonContainer {
+    margin-top: 0.2rem;
+    padding: 1rem 2rem;
+}
+
+
+.card .buttonContainer .buttonText {
+    width: 100%;
+    background: transparent;
+    color: var(--green-500);
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+    height: 45px;
+    padding: 0 1.5rem;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+}
+
+.card .buttonContainer .buttonText:hover {
+    background: var(--green-500);
+    color: var(--white);
 }
