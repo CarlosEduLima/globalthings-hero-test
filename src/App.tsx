@@ -6,7 +6,7 @@ function App() {
   return (
     <div className={styles.container}>
       <div className={styles.buttonContainer}>
-        <Link to={"heroes"} style={{ textDecoration: 'none' }}>
+        <Link to={"herois"} style={{ textDecoration: 'none' }}>
           <span className={styles.buttonText}>Cadastrar herói</span>
         </Link>
       </div>
