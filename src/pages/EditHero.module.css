@@ -15,6 +15,10 @@
     justify-content: center;
 }
 
+.container label {
+    align-self: flex-start;
+}
+
 .container input {
     height: 50px;
     width: 100%;
@@ -52,7 +56,7 @@
 
 .container input[type='checkbox'] {
     height: 20px;
-    width: 40px;
+    width: auto;
     align-self: flex-start;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -81,7 +85,7 @@
     cursor: pointer;
 }
 
-.container .buttonContainer .buttonText:hover {
+.container .button:hover {
     background: var(--green-500);
     color: var(--white);
 }
