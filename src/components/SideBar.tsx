@@ -1,9 +1,9 @@
-import styles from "./DetailsCard.module.css";
+import styles from "./SideBar.module.css";
 import { PencilLine, TrashSimple, Plus, Spinner } from "phosphor-react";
 import { Link } from "react-router-dom";
-import { useHero } from "../../contexts/Hero";
+import { useHero } from "../contexts/Hero";
 
-export function DetailsCard({ hero }: any) {
+export function Sidebar({ hero }: any) {
   const { removeHero, loading } = useHero();
   return (
     <aside className={styles.sidebar}>
