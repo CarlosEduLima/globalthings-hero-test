@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Heroes.module.css";
-import { DetailsCard } from "../components/DetailsCard/DetailsCard";
-import { Card } from "../components/Card/Card";
+import { Sidebar } from "../components/SideBar";
+import { Card } from "../components/Card";
 import { useHero } from "../contexts/Hero";
 import { Spinner } from "phosphor-react";
 
@@ -14,7 +14,7 @@ function Heroes() {
 
   return (
     <div className={styles.wrapper}>
-      <DetailsCard hero={selectedHero} />
+      <Sidebar hero={selectedHero} />
       <main>
         {loading ? (
           <div className={styles.loadingContainer}>
